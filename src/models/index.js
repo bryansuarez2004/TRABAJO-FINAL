@@ -1,6 +1,7 @@
 const Cart = require("./Cart");
 const Category = require("./Category");
 const Product = require("./Product");
+const Purchase = require("./Purchase");
 const User = require("./User");
 
 
@@ -17,3 +18,12 @@ User.hasMany(Cart)
 //Cart tendra una fk de product
 Cart.belongsTo(Product)
 Product.hasMany(Cart)
+
+
+//Purchase tendra una fk de user
+Purchase.belongsTo(User)
+User.hasMany(Purchase)
+
+//Purchase tendra una fk de product
+Purchase.belongsTo(Product)
+Product.hasMany(Purchase)
