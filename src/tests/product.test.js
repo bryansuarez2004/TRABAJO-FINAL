@@ -88,7 +88,6 @@ test("GET -> 'URL_BASE/:productId', should return status code 200, res.body to b
     const res = await request(app)
     .get(`${URL_BASE}/${productId}`)
     
-    console.log(res.body);
     
     expect(res.status).toBe(200)
     expect(res.body).toBeDefined()
